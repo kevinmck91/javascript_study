@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Basic DOM Examples</title>	
+	
+</head>
+
+<body>
+<h1><u>Basic DOM Examples</u></h1> 
+
+	
+
+<p id="header">1. Getting an element by ID</p>
+	<script>
+		document.getElementById("header").innerHTML = "Element changed by ID";
+	</script>
+	
+	
+	
+	<p class="myClass">2 .Getting an element by Class</p>
+	<script>
+		//getElementsByClassName(myClass) Returns all class elements as an array
+		var x = document.getElementsByClassName("myClass");
+		x[0].innerHTML = "Element Changed by Class";
+	</script>
+	
+	
+	
+	
+	<b>3. Getting an element by TagName</b>
+	<script>
+		//getElementsByTagName("b") Returns all tag elements as an array
+		document.getElementsByTagName("b")[0].innerHTML = "Element changed my TagName";
+	</script>
+	
+	
+	
+	
+	
+	<p id="style" style="color:green">4. Element changed by Style</p>
+	<script>
+		document.getElementById("style").style.color = "blue";
+	</script>
+
+	
+
+
+	
+	<style>.democlass {color: red;}</style>
+	<p id="style2">5. Element changed by setting attribute</p>
+	<script>
+		document.getElementById("style2").setAttribute("class", "democlass");
+	</script>
+	
+	
+	
+	
+	
+	<p>6. Creating a button:</p>
+	<script>
+		var btn = document.createElement("INPUT");
+		btn.type = "button";
+		btn.value = "This Button was created";
+		btn.style.backgroundColor = "#ffff99";
+		document.body.appendChild(btn);
+	</script>
+	
+	
+	
+	
+	
+	<p id="changeClass" Class="Version1">7. Replacing a class name with another</p>
+	<script>
+		document.getElementById("Version1").className = "Version2";
+	</script>
+	
+	
+	
+	
+	
+	<p id="addClass" Class="Version2">8. Adding an additional class</p>
+	<script>
+		document.getElementById("addClass").className += " Version3";;
+	</script>
+
+
+
+
+	<p id="creatTag" Class="Version4">9. Adding an additional tag/node</p>
+	<script>
+		var para = document.createElement("p");
+		var node = document.createTextNode("This is new.");
+
+		para.appendChild(node);
+
+		var element = document.getElementById("creatTag");
+		element.appendChild(para);
+	</script>
+	
+	
+	
+	
+	
+	
+	<pre>
+		<b>9. Nodes</b>
+		In the HTML DOM (Document Object Model), everything is a node:
+		The document itself is a document node
+		All HTML elements are element nodes
+		All HTML attributes are attribute nodes
+		Text inside HTML elements are text nodes
+		Comments are comment nodes
+		When an HTML document is loaded into a web browser, it becomes a document object.
+		The document object is the root node of the HTML document and the "owner" of all other nodes:
+		(element nodes, text nodes, attribute nodes, and comment nodes)
+		The document object provides properties and methods to access all node objects, from within JavaScript.
+	</pre>
+	
+</body>
+</html>

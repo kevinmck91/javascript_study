@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document. DOM Examples</title>	
+	
+</head>
+
+<body>
+<h1><u>Document. DOM Examples</u></h1> 
+	
+	<pre>
+		<b>Nodes</b>
+		In the HTML DOM (Document Object Model), everything is a node:
+		The document itself is a document node
+		All HTML elements are element nodes
+		All HTML attributes are attribute nodes
+		Text inside HTML elements are text nodes
+		Comments are comment nodes
+		When an HTML document is loaded into a web browser, it becomes a document object.
+		The document object is the root node of the HTML document and the "owner" of all other nodes:
+		(element nodes, text nodes, attribute nodes, and comment nodes)
+		The document object provides properties and methods to access all node objects, from within JavaScript.
+		https://www.w3schools.com/jsref/dom_obj_document.asp
+	</pre>
+	<br><br><br>
+
+
+
+	<b>1. document.anchors</b>
+	<p>The anchors collection returns a collection of all < a> elements in the document that have a name attribute.</p>
+	<p id="demo">Text goes here</p>
+	<script>
+		var x = document.anchors.length;
+		document.getElementById("demo").innerHTML = x;
+	</script>
+	<br><br><br>
+	
+
+
+	<b>2. document.activeElement</b>
+	<p>Returns the currently focused element in the document (curently displays 'body' element as onload)</p>
+	<button>A Button</button>
+	<p id="demo2">Text goes here</p>
+	<script>
+		var x = document.activeElement.tagName;
+		document.getElementById("demo2").innerHTML = x;
+	</script>
+	<br><br><br>
+	
+
+
+		
+	<b>3. document.anchors</b>
+	<p>display the base URI of the document</p>
+	<p id="demo3">Text goes here</p>
+	<script>
+		var x = document.baseURI;
+		document.getElementById("demo3").innerHTML = x;
+	</script>
+	<br><br><br>
+
+
+
+	<b>4. document.anchors</b>
+	<p>Display the cookies associated with the current document.</p>
+	<p id="demo4">Text goes here</p>
+	<script>
+		var x = document.cookie;
+		if(x === ""){ x = "None"};
+		document.getElementById("demo4").innerHTML = "Cookies associated with this document: " + x;
+	</script>
+	<br><br><br>
+
+
+
+	<b>5. document.createTextNode</b>
+	<p>Create a Text Node and append it to the document</p>
+	<script>
+		 var t = document.createTextNode("Hello World");
+		document.body.appendChild(t);
+	</script>
+	<br><br><br>
+
+
+
+
+	<b>6. document.createElement</b>
+	<p>Create an element and add text to that element</p>
+	<p id="demo5">To create a button with text you must also create a Text Node which you append to the < button> element:</p>
+	<script>
+		var btn = document.createElement("BUTTON");        // Create a <button> element
+		var t = document.createTextNode("CLICK ME");       // Create a text node
+		btn.appendChild(t);                                // Append the text to <button>
+		document.body.appendChild(btn);						// Append <button> to <body>
+	</script>	
+	<br><br><br>
+		
+
+
+
+	<b>7. document.lastModified</b>
+	<p>Display the date and time this document was last modified.</p>
+	<p id="demo6">In this example, we convert the lastModified property into a Date object.</p>
+	<script>
+		var x = new Date(document.lastModified);
+		document.getElementById("demo6").innerHTML = x;
+	</script>	
+	<br><br><br>
+	
+
+
+		
+	<b>8. document.open / document.close </b>
+	<p>open an output stream, add some text, and close the output stream.</p>
+	<script>
+		document.open();								//The open() method opens an output stream to collect the output from any document.write() or document.writeln() methods.
+		document.write("<p>Hello World</p>");
+		document.close();								//Once all the writes are performed, the document.close() method causes any output written to the output stream to be displayed.
+	</script>	
+	<br><br><br>
+	
+
+
+
+	<b>9. document.readyState</b>
+	<p>Get the loading status of the current document:</p>
+	<p id="demo7">Text goes here</p>
+	<script>
+		var x = document.readyState;
+		document.getElementById("demo7").innerHTML = x;
+	</script>		
+	<br><br><br>
+	
+
+
+	<b>10. document.scripts</b>
+	<p>Get the contents of the first script element in the document.</p>
+	<pre id="demo8">Text goes here</pre>
+	<script>
+		var x = document.scripts[0].text;
+		document.getElementById("demo8").innerHTML = x;
+	</script>				
+	<br><br><br>
+	
+
+
+		
+</body>
+</html>

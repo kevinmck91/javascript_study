@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<script src="quiz.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Quiz</title>
+</head>
+
+<body onload="displayQuestion()" >
+
+	<h1> Quiz </h2>
+
+	<p id="questionNumber"></p>
+
+	<p id="question"></p>
+
+	<div id="inputAndButton">
+
+		<div class="radio">
+			<input type="radio" name="answer" value="0" ><label id="0"></label><br>
+		</div>
+		
+		<div class="radio">	
+			<input type="radio" name="answer" value="1" ><label id="1"></label><br>
+		</div>
+		
+		<div class="radio">		
+			<input type="radio" name="answer" value="2" ><label id="2"></label><br>
+		</div>
+		
+		<div class="radio">	
+			<input type="radio"	name="answer" value="3" ><label id="3"></label><br>
+		</div>
+
+		<br><br>
+		
+		<div id="button">
+			<button onclick="submit()" value="submit">Submit</button>
+		</div>
+		
+	</div>	
+
+	<p id="answerConfirmation"></p>
+	<p id="score"></p>
+	<p id="answerArray"></p>
+		
+</body>
+</html>
