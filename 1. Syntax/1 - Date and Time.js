@@ -1,4 +1,4 @@
-//debugger;
+
 var date = new Date();
 day = 	date.getDay();
 
